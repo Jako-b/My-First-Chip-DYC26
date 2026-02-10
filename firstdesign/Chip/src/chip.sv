@@ -16,7 +16,7 @@ logic [4:0] result;
 logic [3:0] tens;
 logic [3:0] ones;
 
-controller u_cntrl(
+controller u_ctrl(
     .clk(clk),
     .rst_n(rst_n),
     .button(button),
@@ -27,8 +27,8 @@ controller u_cntrl(
 
 adder u_adder(
     .clk(clk),
-    .operand(x),
-    .save_A(saveA),
+    .operand(X),
+    .save_A(save_A),
     .save_B(save_B),
     .result(result)
 );
@@ -39,14 +39,14 @@ bcd_converter u_bcd(
     .ones(ones)
 );
 
-seven_segment u_seven1(
+seven_segment u_seg0(
     .clk(clk),
     .digit(tens),
     .update(show_result),
     .seg(seg0)
 );
 
-seven_segment u_seven2(
+seven_segment u_seg1(
     .clk(clk),
     .digit(ones),
     .update(show_result),
