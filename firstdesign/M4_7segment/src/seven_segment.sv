@@ -3,7 +3,7 @@ module seven_segment(
     input logic [3:0]  digit,
     input logic        update,
     output logic [6:0] seg
-
+);
     logic [3:0] value;
 
     always_ff @(posedge clk) begin
@@ -25,7 +25,5 @@ module seven_segment(
             default: seg = 7'bxxxxxxx;
         endcase
     end
-
-);
 
 endmodule

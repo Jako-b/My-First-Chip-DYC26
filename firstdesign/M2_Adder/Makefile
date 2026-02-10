@@ -2,7 +2,7 @@ WORK_DIR=$(shell pwd)
 TOP=adder
 TAG=adder-run
 
-PDK_ROOT ?= $(WORK_DIR)/../../../IHP-Open-PDK
+PDK_ROOT ?= $(WORK_DIR)/../../pdk
 PDK = ihp-sg13g2
 
 .PHONY: librelane
